@@ -6,7 +6,7 @@
 /*   By: aurele <aurele@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 23:51:54 by aurele            #+#    #+#             */
-/*   Updated: 2026/02/04 23:53:42 by aurele           ###   ########.fr       */
+/*   Updated: 2026/02/27 22:59:12 by ahabbard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ int	check_arg(char c, va_list arg, int *compteur)
 	else if (c == 'u')
 		ft_putnbr_unsigned(va_arg(arg, unsigned int), compteur);
 	else if (c == 'x')
-		ft_putnbr_base((unsigned int)va_arg(arg, unsigned int), \
-		"0123456789abcdef", compteur, c);
+		ft_putnbr_base((unsigned int)va_arg(arg, unsigned int),
+			"0123456789abcdef", compteur, c);
 	else if (c == 'X')
-		ft_putnbr_base((unsigned int)va_arg(arg, unsigned int), \
-		"0123456789ABCDEF", compteur, c);
+		ft_putnbr_base((unsigned int)va_arg(arg, unsigned int),
+			"0123456789ABCDEF", compteur, c);
 	else if (c == 'p')
-		ft_putnbr_base((unsigned long long)va_arg(arg, unsigned long long), \
-		"0123456789abcdef", compteur, c);
+		ft_putnbr_base((unsigned long long)va_arg(arg, unsigned long long),
+			"0123456789abcdef", compteur, c);
 	else
 		return (-1);
 	return (1);
@@ -40,10 +40,10 @@ int	check_arg(char c, va_list arg, int *compteur)
 
 int	ft_printf(const char *s, ...)
 {
-	size_t		i;
-	va_list		arg;
-	char		*str;
-	int			compteur;
+	size_t	i;
+	va_list	arg;
+	char	*str;
+	int		compteur;
 
 	if (!s)
 		return (-1);
